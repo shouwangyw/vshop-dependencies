@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.yz.vshop</groupId>
+  <groupId>com.veli.vshop</groupId>
   <artifactId>vshop-dependencies</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
@@ -15,7 +15,7 @@
     <mapper.starter.version>2.0.2</mapper.starter.version>
     <druid.starter.version>1.1.9</druid.starter.version>
     <mysql.version>5.1.32</mysql.version>
-    <pageHelper.starter.version>1.2.3</pageHelper.starter.version>
+    <pageHelper.starter.version>1.2.5</pageHelper.starter.version>
     <activation.version>1.1.1</activation.version>
     <lambok.version>1.16.20</lambok.version>
     <fastjson.version>1.2.9</fastjson.version>
@@ -34,8 +34,14 @@
     <servlet-http.version>4.0.1</servlet-http.version>
     <commons-io.version>2.6</commons-io.version>
     <httpclient.version>4.5.11</httpclient.version>
+    <disruptor.version>3.4.1</disruptor.version>
+    <lucene-core.version>4.0.0</lucene-core.version>
     <rocketma.version>4.5.1</rocketma.version>
     <sharding-jdbc.version>2.0.0.M3</sharding-jdbc.version>
+    <slf4j-api.version>1.7.7</slf4j-api.version>
+    <swagger2.version>2.9.2</swagger2.version>
+    <swagger-bootstrap-ui.version>1.9.3</swagger-bootstrap-ui.version>
+    <junit.version>4.12</junit.version>
   </properties>
 
   <dependencyManagement>
@@ -130,6 +136,19 @@
         <version>${commons-configuration.version}</version>
       </dependency>
 
+      <!-- disruptor 高效队列-->
+      <dependency>
+        <groupId>com.lmax</groupId>
+        <artifactId>disruptor</artifactId>
+        <version>${disruptor.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.lucene</groupId>
+        <artifactId>lucene-core</artifactId>
+        <version>${lucene-core.version}</version>
+      </dependency>
+
       <!-- rocketMQ -->
       <dependency>
         <groupId>org.apache.rocketmq</groupId>
@@ -186,8 +205,33 @@
         <version>${lambok.version}</version>
         <scope>provided</scope>
       </dependency>
+
+      <!-- slf4j-api -->
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>${slf4j-api.version}</version>
+      </dependency>
+
+      <!-- swagger2 -->
+      <dependency>
+        <groupId>io.springfox</groupId>
+        <artifactId>springfox-swagger2</artifactId>
+        <version>${swagger2.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.github.xiaoymin</groupId>
+        <artifactId>swagger-bootstrap-ui</artifactId>
+        <version>${swagger-bootstrap-ui.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>${junit.version}</version>
+        <scope>test</scope>
+      </dependency>
     </dependencies>
   </dependencyManagement>
-
 
 </project>
