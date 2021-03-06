@@ -30,13 +30,15 @@
     <commons-configuration.version>1.10</commons-configuration.version>
     <commons-http.version>3.1</commons-http.version>
     <guava.version>23.0</guava.version>
+    <redisson.version>2.11.5</redisson.version>
+    <curator.version>2.12.0</curator.version>
     <jackson.version>2.11.0</jackson.version>
     <servlet-http.version>4.0.1</servlet-http.version>
     <commons-io.version>2.6</commons-io.version>
     <httpclient.version>4.5.11</httpclient.version>
     <disruptor.version>3.4.1</disruptor.version>
     <lucene-core.version>4.0.0</lucene-core.version>
-    <rocketma.version>4.5.1</rocketma.version>
+    <rocketmq.version>4.7.1</rocketmq.version>
     <sharding-jdbc.version>2.0.0.M3</sharding-jdbc.version>
     <slf4j-api.version>1.7.7</slf4j-api.version>
     <swagger2.version>2.9.2</swagger2.version>
@@ -160,12 +162,12 @@
       <dependency>
         <groupId>org.apache.rocketmq</groupId>
         <artifactId>rocketmq-common</artifactId>
-        <version>${rocketma.version}</version>
+        <version>${rocketmq.version}</version>
       </dependency>
       <dependency>
         <groupId>org.apache.rocketmq</groupId>
         <artifactId>rocketmq-client</artifactId>
-        <version>${rocketma.version}</version>
+        <version>${rocketmq.version}</version>
       </dependency>
 
       <!-- fastjson -->
@@ -195,6 +197,23 @@
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
         <version>${guava.version}</version>
+      </dependency>
+      <!-- Redisson 实现分布式锁 -->
+      <dependency>
+        <groupId>org.redisson</groupId>
+        <artifactId>redisson</artifactId>
+        <version>${redisson.version}</version>
+      </dependency>
+      <!-- zookeeper -->
+      <dependency>
+        <groupId>org.apache.curator</groupId>
+        <artifactId>curator-recipes</artifactId>
+        <version>${curator.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.curator</groupId>
+        <artifactId>curator-framework</artifactId>
+        <version>${curator.version}</version>
       </dependency>
 
       <!-- joda-time -->
@@ -230,6 +249,7 @@
         <artifactId>swagger-bootstrap-ui</artifactId>
         <version>${swagger-bootstrap-ui.version}</version>
       </dependency>
+
 
       <dependency>
         <groupId>junit</groupId>
